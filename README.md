@@ -1,3 +1,3 @@
-### 🫧𓇼𓏲*ੈ✩‧₊˚🎐 SIG-iOS Development Project
+### 🫧𓏲✩‧₊˚🎐 SIG-iOS Development Project
 
 ![Header](./Travel.png)
