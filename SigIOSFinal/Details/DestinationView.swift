@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DestinationView: View {
     var destination: Destination
-    
     var body: some View {
         ScrollView{
             AsyncImage(url: URL(string: destination.image)) { image in

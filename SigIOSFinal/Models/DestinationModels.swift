@@ -1,18 +1,23 @@
 //
 //  DestinationModels.swift
-//  SigIOSFinal
+//  sigios
 //
-//  Created by Quynh Tram on 1/25/24.
+//  Created by Quynh Tram on 1/21/24.
 //
 
 import Foundation
 
-enum Category : String {
-    case visited = "Visited"
-    case toVisit = "To be Visited"
+enum Category: String, CaseIterable, Identifiable {
+    var id: String {self.rawValue}
+    
+    case vacation = "Vacation"
+    case roadTrip = "Road Trip"
+    case hiking = "Hiking"
+    case familyTrip = "Family Trip"
+    case soloTrip = "Solo Trip"
 }
 
-struct Destination : Identifiable {
+struct Destination: Identifiable {
     let id = UUID()
     let name: String
     let image: String
@@ -20,7 +25,7 @@ struct Destination : Identifiable {
     let location: String
     let date: String
     let url: String
-    
+    let category: Category.RawValue
 }
 
 extension Destination {
@@ -28,10 +33,11 @@ extension Destination {
         Destination (
             name: "Let's go to Canada! 🛤️",
             image: "https://outsidesuburbia.com/wp-content/uploads/2021/01/banff-4331689_1280-1024x682.jpg",
-            description: "This is what I want to do during my trip in Canada!",
+            description: "This is what I want to do during my trip in Canada!\n\nExplore the vibrant city of Toronto with a visit to the iconic CN Tower and Royal Ontario Museum.\n\nHead to Banff National Park for breathtaking mountain landscapes and turquoise lakes.\n\nImmerse yourself in the rich history of Old Quebec City, followed by a scenic drive along the Cabot Trail in Nova Scotia.\n\nConclude your Canadian adventure by experiencing the multicultural charm\nof Vancouver's Stanley Park and Granville Island.",
             location: "Canada",
             date: "09/09/2010",
-            url: "String"
+            url: "String",
+            category: "Road Trip"
         ),
         Destination (
             name: "Spring Break in Italy ⛲",
@@ -39,7 +45,8 @@ extension Destination {
             description: "This is what I want to do during my trip in Italy!",
             location: "Italy",
             date: "03/25/2013",
-            url: "String"
+            url: "String",
+            category: "Solo Trip"
         ),
         Destination (
             name: "Summer Australia Trip 🏝️",
@@ -47,32 +54,44 @@ extension Destination {
             description: "This is what I want to do during my trip in Australia!",
             location: "Australia",
             date: "06/10/2014",
-            url: "String"
+            url: "String",
+            category: "Hiking"
         ),
         Destination (
             name: "Antarctica Cruise 🛴",
-            image: "https://www.civitatis.com/blog/wp-content/uploads/2020/02/blog-australia.jpg",
+            image: "https://cdn.mos.cms.futurecdn.net/3YtWkM3eghxvYLTTNkuXXg-1200-80.jpg",
             description: "This is what I want to do during my trip in Australia!",
             location: "Australia",
-            date: "06/10/2014",
-            url: "String"
+            date: "07/31/2015",
+            url: "String",
+            category: "Vacation"
         ),
         Destination (
             name: "Time to go surfing in Hawaii 🌄",
-            image: "https://www.civitatis.com/blog/wp-content/uploads/2020/02/blog-australia.jpg",
+            image: "https://www.gohawaii.com/sites/default/files/hero-unit-images/12845-p1bd4nb8t912gc1ic74nd14g2ru.jpg",
             description: "This is what I want to do during my trip in Australia!",
             location: "Australia",
-            date: "06/10/2014",
-            url: "String"
+            date: "08/10/2017",
+            url: "String",
+            category: "Family Trip"
         ),
         Destination (
             name: "Let's Visit Egypt 🕌",
-            image: "https://www.civitatis.com/blog/wp-content/uploads/2020/02/blog-australia.jpg",
+            image: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1037036482v2.jpg",
             description: "This is what I want to do during my trip in Australia!",
             location: "Australia",
-            date: "06/10/2014",
-            url: "String"
+            date: "10/10/2017",
+            url: "String",
+            category: "Vacation"
+        ),
+        Destination (
+            name: "Ready for Russia 🏢",
+            image: "https://www.state.gov/wp-content/uploads/2018/11/Russia-2499x1406.jpg",
+            description: "This is what I want to do during my trip in Australia!",
+            location: "Russia",
+            date: "01/11/2018",
+            url: "String",
+            category: "Family Trip"
         )
     ]
 }
-
