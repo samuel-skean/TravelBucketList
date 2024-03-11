@@ -9,11 +9,10 @@ import SwiftUI
 
 struct BucketListView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Text("Bucket List")
                 .navigationTitle("Bucket List")
         }
-        .navigationViewStyle(.stack)
     }
     }
 

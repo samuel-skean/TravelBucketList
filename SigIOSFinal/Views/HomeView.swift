@@ -9,13 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Text("Home")
                 .navigationTitle("Home")
             
         }
-        
-        .navigationViewStyle(.stack)
     }
 }
 

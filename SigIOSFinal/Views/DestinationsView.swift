@@ -9,11 +9,10 @@ import SwiftUI
 
 struct DestinationsView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Text("Destinations")
                 .navigationTitle("Destinations")
         }
-        .navigationViewStyle(.stack)
     }
     }
 

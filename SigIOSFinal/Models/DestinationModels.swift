@@ -25,7 +25,7 @@ struct Destination: Identifiable {
     let location: String
     let date: String
     let url: String
-    let category: Category.RawValue
+    let categories: [Category.RawValue]
 }
 
 extension Destination {
@@ -37,7 +37,7 @@ extension Destination {
             location: "Canada",
             date: "09/09/2010",
             url: "String",
-            category: "Road Trip"
+            categories: ["Road Trip"]
         ),
         Destination (
             name: "Spring Break in Italy ⛲",
@@ -46,7 +46,7 @@ extension Destination {
             location: "Italy",
             date: "03/25/2013",
             url: "String",
-            category: "Solo Trip"
+            categories: ["Solo Trip"]
         ),
         Destination (
             name: "Summer Australia Trip 🏝️",
@@ -55,7 +55,7 @@ extension Destination {
             location: "Australia",
             date: "06/10/2014",
             url: "String",
-            category: "Hiking"
+            categories: ["Hiking"]
         ),
         Destination (
             name: "Antarctica Cruise 🛴",
@@ -64,7 +64,7 @@ extension Destination {
             location: "Australia",
             date: "07/31/2015",
             url: "String",
-            category: "Vacation"
+            categories: ["Vacation"]
         ),
         Destination (
             name: "Time to go surfing in Hawaii 🌄",
@@ -73,7 +73,7 @@ extension Destination {
             location: "Australia",
             date: "08/10/2017",
             url: "String",
-            category: "Family Trip"
+            categories: ["Family Trip"]
         ),
         Destination (
             name: "Let's Visit Egypt 🕌",
@@ -82,7 +82,7 @@ extension Destination {
             location: "Australia",
             date: "10/10/2017",
             url: "String",
-            category: "Vacation"
+            categories: ["Vacation"]
         ),
         Destination (
             name: "Ready for Russia 🏢",
@@ -91,7 +91,7 @@ extension Destination {
             location: "Russia",
             date: "01/11/2018",
             url: "String",
-            category: "Family Trip"
+            categories: ["Family Trip", "Vacation"]
         )
     ]
 }
