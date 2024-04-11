@@ -11,7 +11,7 @@ struct CategoriesView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(Category.allCases) { category in 
+                ForEach(Category.allCases, id: \Category.id) { category in
                     NavigationLink(destination: CategoryView(category: category)) {
                         Text(category.rawValue)
                     }

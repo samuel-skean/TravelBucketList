@@ -9,6 +9,7 @@ import Foundation
 
 enum Category: String, CaseIterable, Identifiable {
     var id: String {self.rawValue}
+//    var x: Int {1}
     
     case vacation = "Vacation"
     case roadTrip = "Road Trip"
